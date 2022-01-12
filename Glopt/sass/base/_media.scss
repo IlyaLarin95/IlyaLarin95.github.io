@@ -1,0 +1,486 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .promo {
+        &__top, &__header {
+            width: 960px;
+        }
+        &__menu {
+            width: 500px;
+            font-size: 14px;
+            &-item {
+                &:not(:last-child):after {
+                    right: -7px;
+                }
+            }
+        }
+        &__call {
+            a {
+                font-size: 16px;
+            }
+        }
+        &__title {
+            font-size: 64px;
+        }
+    }
+    .advantages {
+        &__wrapper {
+            grid-template-columns: repeat(2, 400px);
+            justify-content: center;
+            gap: 35px 60px;
+        }
+        &__item {
+            grid-template-columns: 65px 300px;
+        }
+    }
+    .work {
+        &__item {
+            max-width: 300px;
+            &-img {
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(2, 260px);
+            grid-template-rows: repeat(2, 360px);
+            justify-content: center;
+            gap: 50px 90px;
+        }
+    }
+    .footer {
+        &__title {
+            margin-right: 100px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .subhead {
+        font-size: 18px;
+    }
+    .promo {
+        &__top, &__header {
+            width: 720px;
+        }
+        &__logo {
+            img {
+                max-width: 60px;
+            }
+        }
+        &__header {
+            height: 75px;
+            .btn {
+                width: 115px;
+                height: 36px;
+                font-size: 10px;
+            }
+        }
+        &__menu {
+            width: 400px;
+            font-size: 12px;
+            &-item {
+                &:not(:last-child):after {
+                    right: -4px;
+                }
+            }
+        }
+        &__call {
+            a {
+                font-size: 13px;
+            }
+        }
+        &__title {
+            font-size: 50px;
+        }
+        &__subtitle {
+            font-size: 36px;
+        }
+        &__item {
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+    .modal {
+        &_mini {
+            width: 320px;
+            height: 160px;
+        }
+        padding: 35px;
+        width: 350px;
+        height: 400px;
+    }
+    .feed-form {
+        margin-top: 20px;
+        width: unset;
+        flex-direction: column;
+        .btn {
+            width: 160px;
+            height: 45px;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+    }
+    .advantages {
+        &__wrapper {
+            grid-template-columns: repeat(2, 350px);
+            justify-content: center;
+            gap: 30px 20px;
+        }
+        &__item {
+            gap: 5px 5px;
+            grid-template-columns: 65px 300px;
+        }
+    }
+    .work {
+        &__item {
+            max-width: 230px;
+            &-title {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+            &-descr {
+                font-size: 12px;
+            }
+            &-img {
+                img {
+                    width: 230px;
+                }
+            }
+        }
+    }
+    .consultation {
+        &__wrapper {
+            padding: 70px 50px;
+        }
+        &__form {
+            width: 100%;
+        }
+    }
+    .question {
+        &__form {
+            grid-template-columns: repeat(3, 210px);
+        }
+    }
+    .footer {
+        &__title {
+            margin: 0 auto;
+        }
+        &__phone {
+            flex-direction: column;
+        }
+        &__call {
+            align-items: center;
+            margin: 0 0 5px;
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .hamburger {
+        display: flex;
+        top: 20px;
+        left: 20px;
+    }
+    .promo {
+        &__top {
+            width: 540px;
+            &.fixed {
+                width: 540px;
+                display: none;
+            }
+        }
+        padding: 25px 0 40px 0;
+        background: url('../img/bg-promo.png') no-repeat 25%/cover;
+        &__logo {
+            margin: 0 auto;
+            img {
+                max-width: 100px;
+            }
+        }
+        &__header {
+            width: 540px;
+            .btn {
+                width: 160px;
+                height: 45px;
+                font-size: 12px;
+            }
+        }
+        &__menu {
+            display: none;
+        }
+        &__call {
+            margin-right: 15px;
+            a {
+                font-size: 19px;
+            }
+        }
+        &__text {
+            font-size: 20px;
+        }
+        &__wrapper {
+            margin: 10px auto;
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 250px;
+            margin-bottom: 25px;
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+    .btn_big {
+        width: 230px;
+        height: 57px;
+        font-size: 15px;
+        line-height: 17px;
+        font-weight: 700;
+    }
+    .advantages {
+        padding: 30px 0;
+        &__wrapper {
+            grid-template-columns: 520px;
+            align-items: center;
+            justify-content: center;
+            gap: 25px 20px;
+        }
+        &__item {
+            gap: 5px 5px;
+            grid-template-columns: 65px 450px;
+        }
+    }
+    .work {
+        padding: 30px 0;
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__item {
+            max-width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            &-title {
+                font-size: 18px;
+                margin-top: 25px;
+            }
+            &-descr {
+                font-size: 15px;
+            }
+            &-img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .title {
+        line-height: 26px;
+    }
+    .price {
+        padding: 30px 0;
+        &__wrapper {
+            gap: 30px 25px;
+        }
+    }
+    .consultation {
+        &__wrapper {
+            padding: 70px 15px;
+        }
+        &__input {
+            font-size: 12px;
+        }
+    }
+    .scheme {
+        padding: 30px 0;
+    }
+    .reviews {
+        padding: 30px 0;
+    }
+    .question {
+        padding: 30px 0;
+        &__form {
+            grid-template-columns: repeat(3, 170px);
+        }
+    }
+    .footer {
+        &__top {
+            flex-wrap: wrap;
+        }
+        &__logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__title {
+            margin: 15px auto;
+        }
+        &__phone {
+            max-width: unset;
+            width: 100%;
+            flex-direction: row;
+            justify-content: center;
+        }
+        &__call {
+            align-items: center;
+            margin: 0 15px 0 0;
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .promo {
+        &__top {
+            width: 300px;
+        }
+        padding: 25px 0;
+        &__header {
+            height: 100%;
+            width: 300px;
+            flex-direction: column;
+        }
+        &__call {
+            align-items: center;
+            margin: 10px 0;
+        }
+        &__text {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        &__title {
+            margin-top: 15px;
+            font-size: 44px;
+        }
+        &__subtitle {
+            font-size: 28px;
+        }
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+    .menu {
+        left: -60%;
+        &__block {
+            width: 60%;
+        }
+    }
+    .modal {
+        &_mini {
+            width: 300px;
+            height: 130px;
+        }
+        padding: 25px;
+        width: 250px;
+        height: 400px;
+    }
+    .feed-form {
+        margin-top: 20px;
+        width: unset;
+        flex-direction: column;
+        .btn {
+            width: 160px;
+            height: 45px;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+    }
+    .advantages {
+        &__wrapper {
+            grid-template-columns: 300px;
+            align-items: center;
+            justify-content: center;
+            gap: 30px 20px;
+        }
+        &__item {
+            gap: 5px 5px;
+            grid-template-columns: 60px 240px;
+            grid-template-rows: minmax(20px, auto) minmax(40px, auto);
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: 260px;
+            grid-template-rows: repeat(4, 360px);
+        }
+    }
+    .consultation {
+        &__wrapper {
+            height: 100%;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__form {
+            gap: 15px 0;
+            flex-direction: column;
+        }
+    }
+    .swiper-button-prev {
+        top: 17%;
+        left: 10%;
+    }
+    .swiper-button-next {
+        top: 17%;
+        right: 10%;
+    }
+    .question {
+        min-height: 510px;
+        &__form {
+            grid-template-columns: minmax(240px, auto);
+            grid-template-rows: repeat(3, 50px) 80px 45px;
+            textarea {
+                grid-area: 4/1/5/2;
+            }
+        }
+        &__btn {
+            grid-area: 5/1/6/2;
+        }
+    }
+    .footer {
+        &__title {
+            font-size: 11px;
+        }
+        &__phone {
+            flex-direction: column;
+        }
+        &__title {
+            margin: 15px auto 5px auto;
+        }
+        &__separator {
+            margin: 20px auto;
+        }
+        &__info {
+            flex-direction: column;
+            &-ads {
+                margin: 10px 0;
+            }
+            &-year {
+                order: 3;
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
