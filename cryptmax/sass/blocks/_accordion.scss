@@ -1,0 +1,26 @@
+.accordion {
+    &__title {
+        padding: 25px 0;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        outline: none;
+        &.active {
+            transition: .4s ease-in all;
+            color: $blue;
+            .faq__accordion-icon {
+                transform: rotate(-90deg);
+                path {
+                    transition: .4s ease-in all;
+                    stroke: $blue;
+                }
+            }
+        }
+    }
+    &__info {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: .4s ease-in all;
+    }
+}

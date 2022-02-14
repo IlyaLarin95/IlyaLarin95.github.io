@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap');
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/btn';
+@import 'blocks/hamburger';
+@import 'blocks/title';
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/promo';
+@import 'blocks/fresh-collection';
+@import 'blocks/best-seller';
+@import 'blocks/catalog';
+@import 'blocks/explore';
+@import 'blocks/item-card';
+@import 'blocks/guide';
+@import 'blocks/collection';
+@import 'blocks/start-collection';
+@import 'blocks/discover';
+@import 'blocks/product';
+@import 'blocks/author';
+@import 'blocks/accordion';
+@import 'blocks/faq';
+@import 'blocks/video';
+
+
+* {
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@import 'base/media';

@@ -1,0 +1,128 @@
+.faq {
+    padding-top: 200px;
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 45px;
+        color: #000000;
+    }
+    &__text {
+        margin-top: 21px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+        color: #666666;
+        max-width: 562px;
+        a {
+            color: #3772FF;
+        }
+    }
+    &__wrapper {
+        margin-top: 58px;
+        display: flex;
+        align-items: flex-start;
+        gap: 130px;
+    }
+    &__tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__tab {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 15px;
+        width: 370px;
+        height: 50px;
+        background: #F3F4F5;
+        border-radius: 5px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 150%;
+        color: $gray;
+        cursor: pointer;
+        &-icon {
+            min-width: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &:hover {
+            transition: .3s linear all;
+            background-color: $blue;
+            color: #fff;
+            .faq__tab-icon {
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .tab_active {
+        background-color: $blue;
+        color: #fff;
+        .faq__tab-icon {
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+        &:hover {
+            cursor: default;
+        }
+    }
+    &__content {
+        display: none;
+    }
+    .tab__content_active {
+        display: flex;
+        max-width: 57%;
+    }
+    &__accordion {
+        width: 100%;
+        &-item {
+            position: relative;
+            border-top: 1px solid #EEEEEE;
+        }
+        &-item:last-child {
+            border-bottom: 1px solid #EEEEEE;
+        }
+        &-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            transition: .4s ease-out all;
+            path {
+                transition: .4s ease-out all
+            }
+        }
+        &-title {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #000000;
+            &:hover {
+                color: $blue;
+            }    
+        }
+        &-info {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 150%;
+            color: $gray;
+        }
+    }
+}

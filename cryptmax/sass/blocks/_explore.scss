@@ -1,0 +1,41 @@
+.explore {
+    min-height: 740px;
+    padding: 100px 0;
+    &__top {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+    &__swiper-arrows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        .arrow {
+            cursor: pointer;
+            svg {
+                transition: .3s linear;
+                path {
+                    transition: .3s linear;
+                }
+            }
+            &:hover {
+                svg {
+                    fill: $blue;
+                    transition: .3s linear;
+                    circle {
+                        stroke: $blue;
+                        transition: .3s linear;
+                    }
+                    path {
+                        fill: #fff;
+                        transition: .3s linear;
+                    }
+                }
+            }
+        }
+    }
+    &__wrapper {
+        margin-top: 60px;
+    }
+}

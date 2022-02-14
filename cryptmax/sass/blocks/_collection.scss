@@ -1,0 +1,94 @@
+.collection {
+    padding: 90px 0;
+    &__wrapper {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 370px;
+    }
+    &__top {
+        display: grid;
+        grid-template-columns: 73% 24%;
+        grid-template-rows: repeat(3, 117px);
+        gap: 10px;
+    }
+    &__link {
+        position: relative;
+        width: 100%;
+        height: 117px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        color: #fff;
+        transition: .3s linear all;
+        &-more {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s linear all;
+        }
+    }
+    &__link:nth-child(1) {
+        grid-area: 1 / 1 / 4 / 2;
+    }
+    &__link:nth-child(2) {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    &__link:nth-child(3) {
+        grid-area: 2 / 2 / 3 / 2;
+    }
+    &__link:nth-child(4) {
+        grid-area: 3 / 2 / 4 / 2;
+        &:hover {
+            color: rgb(255, 255, 0);
+            transition: .3s linear all;
+            .collection__link-more {
+                transform: translate(-50%, -50%) scale(1.2);
+                transition: .3s linear all;
+            }
+        }
+    }
+    &__link:first-child {
+        width: 100%;
+        height: 370px;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    &__name {
+        margin-top: 11px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 37px;
+        color: #000000;
+    }
+    &__author {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        gap: 5px;
+        font-size: 16px;
+        line-height: 21px;
+        color: $gray;
+        &-name {
+            color: #000000;
+        }
+        &-photo {
+            margin-right: 4px;
+        }
+    }
+}

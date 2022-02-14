@@ -1,0 +1,35 @@
+.fresh-collection {
+    min-height: 400px;
+    padding: 100px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: minmax(200px, 1fr);
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item {
+        height: 100%;
+        // max-width: 270px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 45px;
+        color: #000000;
+    }
+    &__btn {
+        margin-top: 18px;
+        padding: 10px 22px;
+    }
+}

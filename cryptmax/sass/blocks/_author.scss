@@ -1,0 +1,91 @@
+.author {
+    padding-top: 110px;
+    &__img {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        img {
+            max-height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+    &__main {
+        display: flex;
+        // justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -80px;
+    }
+    &__photo {
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+        }
+    }
+    &__name {
+        margin-top: 14px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        color: #000000;
+    }
+    &__link {
+        margin-top: 9px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        input {
+            padding: 7px 10px;
+            width: 180px;
+            height: 30px;
+            border: 1px solid #CCCCCC;
+            outline-color: $blue;
+            border-radius: 5px;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 14px;
+            color: #666666;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            cursor: pointer;
+        }
+    }
+    &__social {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &-link {
+            &:hover {
+                svg {
+                    rect {
+                        fill: $blue;
+                    }
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &__catalog {
+        margin-top: 60px;
+    }
+}

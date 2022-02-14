@@ -1,0 +1,21 @@
+.btn {
+    padding: 15px 25px;
+    background: $blue;
+    border: none;
+    border-radius: 7px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: .3s ease all;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    outline: none;
+    &:hover {
+        background: $dark-blue;
+        transition: .3s ease all;
+    }
+}

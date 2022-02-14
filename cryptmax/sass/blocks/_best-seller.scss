@@ -1,0 +1,112 @@
+.best-seller {
+    min-height: 610px;
+    padding: 100px 0;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__swiper {
+        position: relative;
+    }
+    &__wrapper {
+        margin-top: 100px;
+    }
+    &__item {
+        text-align: center;
+        position: relative;
+        padding: 55px 20px 30px 20px;
+        width: 23%;
+        height: 260px;
+        background: #F3F4F5;
+        border-radius: 15px;
+    }
+    &__photo {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        img {
+            max-width: 80px;
+            max-height: 80px;
+            object-fit: cover;
+        }
+    }
+    &__name {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        color: #000000;
+    }
+    &__icons {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__price {
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 17px;
+        color: #000000;
+    }
+    &__divider {
+        margin: 0 auto;
+        margin-top: 15px;
+        width: 230px;
+        height: 1px;
+        background-color: #DDDDDD;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px 12px;
+        background: #9757D7;
+    }
+}
+
+.swiper {
+    &-arrow {
+        position: absolute;
+        bottom: 95px;
+        transform: translateY(-50%);
+        left: -80px;
+        cursor: pointer;
+        z-index: 10;
+        &_next {
+            left: unset;
+            right: -80px;
+        }
+        svg {
+            path {
+                transition: .3s ease;
+            }
+            circle {
+                transition: .3s ease;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    transition: .3s linear;
+                    fill: $blue;
+                }
+                circle {
+                    transition: .3s linear;
+                    stroke: $blue;
+                }
+            }
+        }
+    }
+}

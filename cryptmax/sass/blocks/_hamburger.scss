@@ -1,0 +1,99 @@
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-items: flex-end;
+    height: 20px;
+    z-index: 100;
+    transition: .3s linear all;
+    span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $blue;
+        box-shadow: 3px 2px 3px 0px rgba(0, 0, 0, .3);
+        transition: .4s ease all; 
+        &:nth-child(2) { 
+            width: 20px;
+        }
+        &:nth-child(3) { 
+            width: 10px;
+            transition-delay: .1s;
+        }   
+    }
+    &.active {
+        span {
+            box-shadow: none;
+        }
+        span:nth-child(1) {
+            transform: rotate(-135deg) translate(-4px, -11px);
+            transition: .3s all;
+        }
+        span:nth-child(2) {
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: .3s all;
+        }
+        span:nth-child(3) {
+            transition: .3s all;
+            width: 30px;
+            transform: rotate(135deg) translate(-2px, 8px);
+            transition-delay: .15s;
+        }
+    }
+}
+
+.hidden-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease all;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+        transition: .4s ease all;
+    }
+    &__block {
+        padding: 150px 30px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: #fff;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    &__link {
+        color: $dark-blue;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: .7;
+        transition: .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    }
+}

@@ -1,0 +1,95 @@
+.catalog {
+    padding: 90px 0;
+    &__top {
+        margin-top: 57px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    &__tabs {
+        display: flex;
+        align-items: center;
+        gap: 10px;      
+        flex-wrap: wrap; 
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .catalog__btn {
+            &_newest {
+                background-color: $purple;
+                &:hover {
+                    background: #7d47b3;
+                }
+            }
+        }
+    }
+    &__tab {
+        padding: 5px 15px;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: $gray;
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+            border: 1px solid $blue;
+            background-color: $blue;
+            cursor: pointer;
+            transition: .3s linear all;
+        }
+    }
+    .tab_active {
+        color: #fff;
+        border: 1px solid $blue;
+        background-color: $blue;
+        cursor: default;
+    }
+    .tab__content {
+        margin-top: 30px;
+        display: none;
+        &_active {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 270px);
+            grid-template-rows: auto;
+            justify-content: space-between;
+            row-gap: 50px;
+        }
+    }
+    &__sort {
+        position: relative;        
+    }
+    &__select {
+        padding: 14px 10px 14px 14px;
+        width: 250px;
+        height: 50px;
+        border: 2px solid #CCCCCC;
+        border-radius: 7px;
+        outline: none;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000000;
+        appearance:none;
+        background-color: transparent;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        cursor: pointer;
+        &-img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+    }
+    &__option {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
