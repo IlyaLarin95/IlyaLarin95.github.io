@@ -3,10 +3,12 @@ $(document).ready(function(){
             hamburger  = document.querySelector('.hamburger'),
             overlay    = document.querySelector('.hidden-menu__overlay');
             menuLink   = document.querySelectorAll('.hidden-menu__link');
+            body       = document.querySelector('body');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active')
         menu.classList.toggle('active')
+        body.classList.toggle('lock')
     });
 
 
