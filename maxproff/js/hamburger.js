@@ -1,7 +1,8 @@
-$(document).ready(function(){
+function hamburger() {
     const   menu       = document.querySelector('.hidden-menu'),
             hamburger  = document.querySelector('.hamburger'),
             menuLink   = document.querySelectorAll('.hidden-menu__item');
+            calcBtn    = document.querySelector('.calc-btn');
             body       = document.querySelector('body'),
             overlay    = document.querySelector('.hidden-menu__overlay');
 
@@ -24,4 +25,11 @@ $(document).ready(function(){
             body.classList.remove('lock');
         })
     });
-});
+    calcBtn.addEventListener('click', () => {
+        hamburger.classList.remove('active')
+        menu.classList.remove('active')
+        body.classList.remove('lock')
+    });
+};
+
+hamburger()
