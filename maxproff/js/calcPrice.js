@@ -45,7 +45,6 @@ function calculate () {
     totalPriceEl.innerText = formatter.format(Math.round(totalPrice));
 
     totalPeriodEl.innerText = Math.round(totalPeriod * 0.01);
-    console.log(totalPeriodEl.innerText)
 
 };
 
