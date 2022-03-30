@@ -5,7 +5,7 @@ $(document).ready(function(){
         $('.overlay, #callback').fadeIn('normal');
     });
     $('.modal__close').on('click', function() {
-        $('.overlay').fadeOut('normal');
+        $('.overlay, #callback, #thanks').fadeOut('normal');
     })
 
     $('.btn-callback-thanks').on('click', function() {
