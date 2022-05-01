@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pero Travel | Экскурсии</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://snipp.ru/cdn/chosen/1.8.7/chosen.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+
+            <div class="container">
+                <div class="header__wrapper">
+                    <img class="header__logo" src="img/logo.svg" alt="logo" width="40" height="57">
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+                            <li class="menu__item"><a href="tours.html" class="menu__link">Экскурсии</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Личный кабинет</a></li>
+                        </ul>
+                    </nav>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        <main class="main" id="tour">
+            <section class="hero-tours">
+                <div class="container">
+                    <h1 class="hero-tours__title">НАШИ ЭКСКУРСИИ</h1>
+                </div>
+            </section>
+            <div class="content">
+                <div class="container">
+
+                    <div class="content__search block-search">
+                        <div class="block-search__tab tab">
+                            <ul class="block-search__items tab__items">
+                                <li class="block-search__title tab__item tab__item_active">
+                                    АВТОБУСНЫЙ ТУР
+                                </li>
+                                <li class="block-search__title tab__item">
+                                    ДЖИППИНГ
+                                </li>
+                                <li class="block-search__title tab__item">
+                                    ЯХТИНГ
+                                </li>
+                                <li class="block-search__title tab__item">
+                                    КАНЬОНИНГ
+                                </li>
+                            </ul>
+                        </div>
+                        <form action="#" class="block-search__form">
+                            <div class="block-search__form-wrapper">
+                                <label class="block-search__item">
+                                    <input type="text" class="block-search__input item-input" placeholder="Абхазия">
+                                </label>
+                                <label class="block-search__item">
+                                    <input type="date" class="block-search__input item-input item-input_date" min="2022-04-23" max="2022-12-31">
+                                </label>
+
+                                <label class="block-search__item">
+                                    <select class="block-search__input item-input item-input_select" name="input-select">
+                                        <option value="1">1 человек</option>
+                                        <option value="2">2 человека</option>
+                                        <option value="3">3 человека</option>
+                                        <option value="4">4 человека</option>
+                                        <option value="5">5 человек</option>
+                                        <option value="6">6 человек</option>
+                                        <option value="7">7 человек</option>
+                                        <option value="8">8 человек</option>
+                                    </select>
+                                </label>
+
+                                <div class="block-search__item">
+                                    <button class="block-search__btn btn">Показать</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="content__tours">
+
+                        <div class="block-filter">
+                            <h3 class="block-filter__title title">Фильтры</h3>
+                            <div class="block-filter__items accordion">
+                                <div class="block-filter__item item-filter">
+                                    <button class="accordion__title item-filter__title">Стоимость</button>
+                                    <div class="accordion__content">
+                                        <p class="accordion__text">Lorem ipsum.</p>
+                                    </div>
+                                </div>
+                                <div class="block-filter__item item-filter">
+                                    <button class="accordion__title item-filter__title">Количество человек</button>
+                                    <div class="accordion__content">
+                                        <p class="accordion__text">Lorem ipsum.</p>
+                                    </div>
+                                </div>
+                                <div class="block-filter__item item-filter">
+                                    <button class="accordion__title item-filter__title">Место</button>
+                                    <div class="accordion__content">
+                                        <p class="accordion__text">Lorem ipsum.</p>
+                                    </div>
+                                </div>
+                                <div class="block-filter__item item-filter">
+                                    <button class="accordion__title item-filter__title">Длительность</button>
+                                    <div class="accordion__content">
+                                        <p class="accordion__text">Lorem ipsum.</p>
+                                    </div>
+                                </div>
+                                <div class="block-filter__item item-filter">
+                                    <button class="accordion__title item-filter__title">Дата</button>
+                                    <div class="accordion__content">
+                                        <p class="accordion__text">Lorem ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="block-filter__btn btn">Показать</button>
+                            <button class="block-filter__clear">
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.94975 11.8493L11.8492 1.94979M11.8492 11.8493L1.94975 1.94979" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                                Сбросить фильтры
+                            </button>
+                        </div>
+
+                        <div class="block-tours">
+                            <h2 class="block-tours__title title">Наши туры</h2>
+                            <div class="tab__content tab__content_active">
+
+                                <div class="block-tours__items">
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel11.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Автобусный тур</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel12.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Автобусный тур</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel13.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Автобусный тур</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel14.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Автобусный тур</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab__content">
+                                <div class="block-tours__items">
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel21.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Джиппинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel22.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Джиппинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel23.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Джиппинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab__content">
+                                <div class="block-tours__items">
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel31.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Яхтинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel32.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Яхтинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel33.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Яхтинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel34.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Яхтинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab__content">
+                                <div class="block-tours__items">
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel41.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Каньонинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel42.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Каньонинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel43.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Каньонинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-tours__item item-tour">
+                                        <div class="item-tour__img">
+                                            <img src="img/travel44.webp" alt="tour">
+                                        </div>
+                                        <div class="item-tour__content">
+                                            <div class="item-tour__type">Каньонинг</div>
+                                            <h3 class="item-tour__title">Золотое кольцо Абхазии (из Адлера)</h3>
+                                            <div class="item-tour__price">
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 618 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Взрослый билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/price-tour.svg" alt="price-tour">
+                                                        1 412 ₽
+                                                    </div>
+                                                    <div class="item-tour__price-name">Детский билет</div>
+                                                </div>
+                                                <div class="item-tour__price-item">
+                                                    <div class="item-tour__price-value">
+                                                        <img src="icons/time-tour.svg" alt="time-tour">
+                                                        2,5 часа
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="item-tour__descr">Вас ждет путешествие по "Золотому Кольцу Абхазии" на
+                                                Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный
+                                                гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной
+                                                остановки. Пересечение границы без пересадок...</p>
+                                            <div class="item-tour__btns">
+                                                <a href="trip.html" class="item-tour__btn btn">Подробнее</a>
+                                                <svg class="item-tour__favorite icon-fav" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="20" cy="20" r="20" fill="#EDEDED" />
+                                                    <path d="M28.8401 12.61C28.3294 12.099 27.7229 11.6936 27.0555 11.4171C26.388 11.1405 25.6726 10.9982 24.9501 10.9982C24.2276 10.9982 23.5122 11.1405 22.8448 11.4171C22.1773 11.6936 21.5709 12.099 21.0601 12.61L20.0001 13.67L18.9401 12.61C17.9084 11.5783 16.5092 10.9987 15.0501 10.9987C13.5911 10.9987 12.1918 11.5783 11.1601 12.61C10.1284 13.6417 9.54883 15.041 9.54883 16.5C9.54883 17.959 10.1284 19.3583 11.1601 20.39L12.2201 21.45L20.0001 29.23L27.7801 21.45L28.8401 20.39C29.3511 19.8792 29.7565 19.2728 30.033 18.6053C30.3096 17.9379 30.4519 17.2225 30.4519 16.5C30.4519 15.7775 30.3096 15.0621 30.033 14.3946C29.7565 13.7272 29.3511 13.1208 28.8401 12.61V12.61Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__left">
+                        <img src="img/logo-color.svg" alt="logo" class="footer__logo" width="80" height="114">
+                    </div>
+                    <div class="footer__middle">
+                        <ul class="footer__menu">
+                            <li class="footer__item"><a href="index.html" class="footer__link">Главная</a></li>
+                            <li class="footer__item"><a href="tours.html" class="footer__link">Экскурсии</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Личный кабинет</a></li>
+                        </ul>
+                        <ul class="footer__contacts">
+                            <li class="footer__contact-item">
+                                <img src="icons/wh.svg" alt=""><a href="tel:79649441874" class="footer__contact-link">+7 964 944 18 74</a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <img src="icons/tg.svg" alt=""><a href="" class="footer__contact-link">Телеграм-бот PeroTravel</a>
+                            </li>
+                            <li class="footer__contact-item">
+                                <img src="icons/mail.svg" alt=""><a href="mailto:office@perotravel.ru" class="footer__contact-link">office@perotravel.ru</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__right">
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <svg width="38" height="38" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.89 22C27.7066 20.137 26.3215 18.4099 24.76 16.85C24.7316 16.8145 24.7162 16.7704 24.7162 16.725C24.7162 16.6796 24.7316 16.6355 24.76 16.6C26.1037 14.766 27.2912 12.8225 28.31 10.79C28.4574 10.4992 28.5275 10.1753 28.5135 9.84953C28.4995 9.52378 28.4019 9.20711 28.23 8.93C28.0733 8.64835 27.8443 8.41365 27.5665 8.25015C27.2887 8.08666 26.9724 8.0003 26.65 8H23.65C23.2694 8.00738 22.8987 8.12329 22.5816 8.33409C22.2645 8.54489 22.0142 8.84183 21.86 9.19C20.9887 11.1172 19.9444 12.9614 18.74 14.7V9.8C18.7414 9.56325 18.6957 9.32859 18.6057 9.1096C18.5157 8.89062 18.3832 8.69166 18.2158 8.52425C18.0484 8.35684 17.8494 8.2243 17.6304 8.13431C17.4115 8.04432 17.1768 7.99867 16.94 8H12.56C12.3051 8.00396 12.056 8.0775 11.8398 8.21266C11.6235 8.34783 11.4483 8.53949 11.333 8.76696C11.2177 8.99443 11.1668 9.24906 11.1856 9.50338C11.2045 9.75769 11.2925 10.002 11.44 10.21L11.84 10.77C12.0546 11.0781 12.1698 11.4445 12.17 11.82V15.66C10.85 13.7071 9.80045 11.5845 9.05005 9.35C8.91473 8.95624 8.6599 8.61453 8.3211 8.37253C7.98229 8.13053 7.57641 8.00029 7.16005 8H4.71005C4.44973 8.00311 4.19347 8.06493 3.96037 8.18086C3.72727 8.29678 3.52334 8.46382 3.36378 8.66953C3.20421 8.87523 3.09313 9.11429 3.03881 9.3689C2.98449 9.6235 2.98833 9.88708 3.05005 10.14C4.40005 15.87 7.23005 20.62 10.82 23.14C11.0352 23.2928 11.3021 23.3544 11.5624 23.3114C11.8228 23.2683 12.0556 23.124 12.21 22.91C12.2873 22.8031 12.3426 22.682 12.3729 22.5537C12.4031 22.4253 12.4077 22.2923 12.3863 22.1621C12.3649 22.032 12.318 21.9074 12.2483 21.7955C12.1786 21.6836 12.0874 21.5865 11.98 21.51C8.84005 19.31 6.34005 15.12 5.07005 10H7.17005C8.09028 12.7959 9.47647 15.4161 11.27 17.75C11.4773 18.0149 11.7628 18.2077 12.086 18.301C12.4091 18.3944 12.7534 18.3835 13.07 18.27C13.3949 18.1567 13.6759 17.9442 13.8733 17.6625C14.0707 17.3807 14.1745 17.044 14.17 16.7V11.82C14.1722 11.1843 14.014 10.5583 13.71 10H16.71V15.43C16.7065 15.8185 16.8308 16.1975 17.064 16.5083C17.2971 16.8191 17.626 17.0446 18 17.15C18.3629 17.2708 18.7554 17.2686 19.117 17.1439C19.4785 17.0192 19.7888 16.7788 20 16.46C21.4204 14.4336 22.6332 12.2694 23.62 10H26.42C25.4669 11.8741 24.3668 13.6697 23.13 15.37C22.8182 15.7872 22.6668 16.3026 22.7035 16.8222C22.7402 17.3418 22.9626 17.8308 23.33 18.2C24.7886 19.6697 26.1014 21.2772 27.25 23H23.9C22.8666 21.2893 21.4788 19.8197 19.83 18.69C19.5827 18.5087 19.2894 18.4005 18.9836 18.3775C18.6778 18.3545 18.3717 18.4178 18.1 18.56C17.8207 18.703 17.5867 18.9209 17.4242 19.1893C17.2617 19.4578 17.1772 19.7662 17.18 20.08V22.46C17.1855 22.5989 17.1362 22.7345 17.0426 22.8373C16.9491 22.9402 16.8189 23.0022 16.68 23.01H15.82C15.5548 23.01 15.3005 23.1154 15.1129 23.3029C14.9254 23.4904 14.82 23.7448 14.82 24.01C14.82 24.2752 14.9254 24.5296 15.1129 24.7171C15.3005 24.9046 15.5548 25.01 15.82 25.01H16.68C17.0118 25.0074 17.3398 24.9393 17.6452 24.8096C17.9506 24.6799 18.2274 24.4912 18.4597 24.2543C18.692 24.0173 18.8752 23.7369 18.9988 23.429C19.1224 23.1211 19.184 22.7918 19.18 22.46V20.69C20.383 21.5948 21.4013 22.7218 22.18 24.01C22.352 24.3079 22.5978 24.5565 22.8939 24.7317C23.1899 24.9069 23.5261 25.0027 23.87 25.01H27.25C27.5957 25.0109 27.9351 24.9184 28.2326 24.7424C28.53 24.5664 28.7744 24.3134 28.94 24.01C29.1099 23.7004 29.1948 23.3513 29.186 22.9983C29.1772 22.6452 29.0751 22.3008 28.89 22Z" fill="#BC0000" />
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.9971 2.34668C12.289 2.34668 11.8241 2.3624 10.3678 2.42884C8.91457 2.49518 7.92206 2.72595 7.05356 3.06349C6.15574 3.41241 5.39433 3.87926 4.6353 4.63828C3.87627 5.39731 3.40942 6.15872 3.0605 7.05654C2.72297 7.92499 2.4922 8.9175 2.42586 10.3707C2.35941 11.827 2.34375 12.292 2.34375 16C2.34375 19.708 2.35941 20.1729 2.42586 21.6292C2.4922 23.0824 2.72297 24.0749 3.0605 24.9434C3.40942 25.8412 3.87627 26.6026 4.6353 27.3617C5.39433 28.1207 6.15574 28.5876 7.05356 28.9365C7.92206 29.274 8.91457 29.5048 10.3678 29.5711C11.8241 29.6375 12.289 29.6533 15.9971 29.6533C19.705 29.6533 20.17 29.6375 21.6263 29.5711C23.0795 29.5048 24.072 29.274 24.9405 28.9365C25.8383 28.5876 26.5997 28.1207 27.3588 27.3617C28.1178 26.6026 28.5847 25.8412 28.9336 24.9434C29.2711 24.0749 29.5019 23.0824 29.5682 21.6292C29.6346 20.1729 29.6503 19.708 29.6503 16C29.6503 12.292 29.6346 11.827 29.5682 10.3707C29.5019 8.9175 29.2711 7.92499 28.9336 7.05654C28.5847 6.15872 28.1178 5.39731 27.3588 4.63828C26.5997 3.87926 25.8383 3.41241 24.9405 3.06349C24.072 2.72595 23.0795 2.49518 21.6263 2.42884C20.17 2.3624 19.705 2.34668 15.9971 2.34668ZM15.9971 4.80678C19.6426 4.80678 20.0745 4.82066 21.5141 4.88634C22.8453 4.9471 23.5683 5.16952 24.0494 5.35645C24.6867 5.60412 25.1415 5.90004 25.6192 6.37778C26.097 6.85553 26.3929 7.3104 26.6406 7.94765C26.8275 8.42875 27.05 9.15169 27.1107 10.4829C27.1763 11.9226 27.1903 12.3544 27.1903 16C27.1903 19.6455 27.1763 20.0774 27.1107 21.5171C27.05 22.8482 26.8275 23.5712 26.6406 24.0523C26.3929 24.6896 26.097 25.1444 25.6192 25.6222C25.1415 26.0999 24.6867 26.3958 24.0494 26.6435C23.5683 26.8305 22.8453 27.0529 21.5141 27.1136C20.0747 27.1793 19.6429 27.1932 15.9971 27.1932C12.3512 27.1932 11.9195 27.1793 10.4799 27.1136C9.14876 27.0529 8.42582 26.8305 7.94472 26.6435C7.30742 26.3958 6.8526 26.0999 6.3748 25.6222C5.89706 25.1444 5.60114 24.6896 5.35352 24.0523C5.16654 23.5712 4.94411 22.8482 4.88336 21.5171C4.81767 20.0774 4.8038 19.6455 4.8038 16C4.8038 12.3544 4.81767 11.9226 4.88336 10.4829C4.94411 9.15169 5.16654 8.42875 5.35352 7.94765C5.60114 7.3104 5.89706 6.85553 6.3748 6.37778C6.8526 5.90004 7.30742 5.60412 7.94472 5.35645C8.42582 5.16952 9.14876 4.9471 10.4799 4.88634C11.9196 4.82066 12.3515 4.80678 15.9971 4.80678Z" fill="#E59B06" />
+                                    <path d="M15.9955 20.551C13.482 20.551 11.4444 18.5134 11.4444 15.9999C11.4444 13.4864 13.482 11.4488 15.9955 11.4488C18.509 11.4488 20.5466 13.4864 20.5466 15.9999C20.5466 18.5134 18.509 20.551 15.9955 20.551ZM15.9955 8.98877C12.1233 8.98877 8.98438 12.1277 8.98438 15.9999C8.98438 19.8721 12.1233 23.0111 15.9955 23.0111C19.8677 23.0111 23.0067 19.8721 23.0067 15.9999C23.0067 12.1277 19.8677 8.98877 15.9955 8.98877Z" fill="#E59B06" />
+                                    <path d="M24.9252 8.71186C24.9252 9.61673 24.1917 10.3502 23.2868 10.3502C22.382 10.3502 21.6484 9.61673 21.6484 8.71186C21.6484 7.80699 22.382 7.07349 23.2868 7.07349C24.1917 7.07349 24.9252 7.80699 24.9252 8.71186Z" fill="#E59B06" />
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg width="32" height="28" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.3715 11.724C21.3836 11.606 21.2911 11.5035 21.1725 11.5035H17.3486V8.8503C17.3486 7.85389 18.009 7.62158 18.4742 7.62158C18.8565 7.62158 20.5467 7.62158 21.1301 7.62158C21.2406 7.62158 21.329 7.53204 21.329 7.42158V3.44037C21.329 3.33021 21.2399 3.2408 21.1298 3.24037L17.3973 3.2258C13.0327 3.2258 12.0395 6.49287 12.0395 8.5836V11.5035H9.71538C9.60492 11.5035 9.51538 11.5931 9.51538 11.7035V15.8173C9.51538 15.9278 9.60492 16.0173 9.71538 16.0173H12.0395C12.0395 21.2364 12.0395 27.4188 12.0395 28.5923C12.0395 28.7028 12.129 28.7898 12.2395 28.7898H17.1486C17.2591 28.7898 17.3486 28.7026 17.3486 28.5922C17.3486 27.4125 17.3486 21.1768 17.3486 16.0173H20.7505C20.8531 16.0173 20.939 15.9398 20.9495 15.8377L21.3715 11.724Z" stroke="#17C1BC" stroke-width="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <div class="overlay">
+        <div class="modal" id="callback">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Оставить заявку</div>
+            <form class="modal__form" action="#">
+                <input class="modal__input" required name="name" placeholder="Ваше имя" type="text">
+                <input class="modal__input" required name="phone" placeholder="Ваш телефон" type="tel">
+                <input class="modal__input" name="email" placeholder="Ваш E-mail" type="email">
+                <label class="modal__checkbox" for="modal-checkbox">
+                    <input required class="modal__checkbox-input" type="checkbox" id="modal-checkbox">
+                    <span class="modal__checkbox-fake"></span>
+                    <span class="modal__checkbox-text">Согласие на обработку персональных данных</span>
+                </label>
+                <button class="btn btn-callback-thanks">Перезвоните мне</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <svg class="modal__icon" width="24" height="24" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 5.66683C15.2179 5.66683 5.66665 15.2181 5.66665 27.0002C5.66665 38.7822 15.2179 48.3335 27 48.3335C38.7821 48.3335 48.3333 38.7822 48.3333 27.0002C48.3333 15.2181 38.7821 5.66683 27 5.66683ZM0.333313 27.0002C0.333313 12.2726 12.2724 0.333496 27 0.333496C41.7276 0.333496 53.6666 12.2726 53.6666 27.0002C53.6666 41.7278 41.7276 53.6668 27 53.6668C12.2724 53.6668 0.333313 41.7278 0.333313 27.0002ZM39.4383 18.3404C40.539 19.3189 40.6382 21.0044 39.6597 22.1051L25.4375 38.1051C24.9315 38.6744 24.2061 39.0002 23.4444 39.0002C22.6827 39.0002 21.9574 38.6744 21.4513 38.1051L14.3402 30.1051C13.3618 29.0044 13.4609 27.3189 14.5617 26.3404C15.6624 25.362 17.348 25.4611 18.3264 26.5619L23.4444 32.3196L35.6736 18.5619C36.652 17.4611 38.3375 17.362 39.4383 18.3404Z" fill="#0499DD" />
+            </svg>
+            <div class="modal__title">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/favorite.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
