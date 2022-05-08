@@ -6,7 +6,8 @@ day.forEach(item => {
                             <span class="calendar__day-available-time-start">06:00-</span>
                             <span class="calendar__day-available-time-end">20:00</span>
                         </span>`;
-                        
+
+        item.classList.add('btn-callback')
         item.insertAdjacentHTML("beforeend", timeHtml)
     }
 })
