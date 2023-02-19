@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <title>Школа YTYN</title>
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="header" data-aos="fade-down" data-aos-delay="650" data-aos-duration="650">
+            <div class="container">
+                <div class="header__main">
+                    <a href="#" class="header__logo">
+                        <img src="img/logo.svg" alt="logo" width="53" height="20">
+                    </a>
+                    <div class="header__menu">
+                        <nav class="header__nav nav">
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#" class="nav__link menu-link">Чему вы научитесь</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link menu-link">Процесс обучения</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link menu-link">Стоимость</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link menu-link">Контакты</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link menu-link nav__link-reg">Регистрация</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <a href="#" class="header__link">
+                        Регистрация
+                    </a>
+                    <button class="header__btn button-main button-main_small">
+                        <span class="button-main__text">Войти</span>
+                    </button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="main">
+
+            <!-- Hero -->
+            <div class="hero" data-aos="fade-in" data-aos-delay="200">
+                <div class="container">
+                    <div class="hero__main">
+                        <div class="hero__content">
+                            <h1 class="hero__title title" data-aos="fade-in" data-aos-duration="800" data-aos-delay="300">Школа
+                                <span>{</span><b>программирования</b><span>}</span><br>
+                                для тех, кому нужны <br> реальные
+                                навыки, <br>
+                                а&nbsp;не&nbsp;просто сертификат
+                            </h1>
+                            <p class="hero__subtitle text" data-aos="fade-in" data-aos-duration="800" data-aos-delay="350">Пройдите
+                                тестирование, чтобы
+                                получить доступ <br>
+                                к&nbsp;бесплатным вводным урокам
+                            </p>
+                            <button class="hero__button button-main" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><span class="button-main__text">Пройти
+                                    тестирование</span></button>
+                        </div>
+                        <div class="hero__image" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                            <img src="img/hero-img.webp" alt="Working" width="393" height="410">
+                        </div>
+                    </div>
+                </div>
+                <a href="#technology" class="hero__button-next" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="800">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#arrow-down"></use>
+                    </svg>
+                </a>
+            </div>
+
+
+            <!-- Technology -->
+            <section class="technology" id="technology">
+                <div class="container">
+                    <h2 class="technology__title title">Какие
+                        технологии вы&nbsp;изучите:</h2>
+                    <div class="technology__content" data-aos="fade-right" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
+                        <div class="technology__image">
+                            <img src="img/technology-img.webp" alt="Working" width="408" height="355">
+                        </div>
+                        <div class="technology__info">
+                            <ul class="technology__info-list">
+                                <li class="technology__info-item" data-aos="zoom-in" data-aos-delay="150">Язык программирования
+                                    Python
+                                </li>
+                                <li class="technology__info-item" data-aos="zoom-in" data-aos-delay="200">Сети</li>
+                                <li class="technology__info-item" data-aos="zoom-in" data-aos-delay="250">Базы данных</li>
+                                <li class="technology__info-item" data-aos="zoom-in" data-aos-delay="300">Фреймворки Flask и Django
+                                </li>
+                                <li class="technology__info-item" data-aos="zoom-in" data-aos-delay="350">Отладка
+                                    и&nbsp;тестирование
+                                </li>
+                                <li class="technology__info-item" data-aos="zoom-in" data-aos-delay="400">Docker</li>
+                                <li class="technology__info-item" data-aos="zoom-in" data-aos-delay="450">Git</li>
+                            </ul>
+                            <div class="technology__info-text">Это необходимый минимум для современного backend-разработчика</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Advantages -->
+            <section class="advantages">
+                <div class="container">
+                    <h2 class="advantages__title title">Обучение в&nbsp;YtYt&nbsp;&mdash; это удобно
+                        и&nbsp;результативно</h2>
+                    <div class="advantages__items">
+                        <div class="advantages__item item-advantages" data-aos="fade-up" data-aos-delay="0">
+                            <i class="item-advantages__icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#practice"></use>
+                                </svg>
+                            </i>
+                            <h3 class="item-advantages__title">Огромное количество практики</h3>
+                            <p class="item-advantages__descr">Более 500 самостоятельных заданий и&nbsp;20&nbsp;полноценных больших
+                                проектов</p>
+                        </div>
+                        <div class="advantages__item item-advantages" data-aos="fade-up" data-aos-delay="100">
+                            <i class="item-advantages__icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#spiral"></use>
+                                </svg>
+                            </i>
+                            <h3 class="item-advantages__title">Современные методики обучения</h3>
+                            <p class="item-advantages__descr">Спиральное обучение:
+                                погружаемся в&nbsp;материал постепенно, виток за&nbsp;витком</p>
+                        </div>
+                        <div class="advantages__item item-advantages" data-aos="fade-up" data-aos-delay="200">
+                            <i class="item-advantages__icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#pc"></use>
+                                </svg>
+                            </i>
+                            <h3 class="item-advantages__title">Простое и&nbsp;понятное изложение</h3>
+                            <p class="item-advantages__descr">Вместо заумных терминов&nbsp;&mdash; примеры из&nbsp;реального мира
+                            </p>
+                        </div>
+                        <div class="advantages__item item-advantages" data-aos="fade-up" data-aos-delay="300">
+                            <i class="item-advantages__icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#calendar"></use>
+                                </svg>
+                            </i>
+                            <h3 class="item-advantages__title">Гибкий график занятий</h3>
+                            <p class="item-advantages__descr">Учитесь в&nbsp;любое время в&nbsp;удобном
+                                для вас темпе</p>
+                        </div>
+                        <div class="advantages__item item-advantages" data-aos="fade-up" data-aos-delay="400">
+                            <i class="item-advantages__icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#chat"></use>
+                                </svg>
+                            </i>
+                            <h3 class="item-advantages__title">Прямая связь с&nbsp;опытными программистами</h3>
+                            <p class="item-advantages__descr">Задавайте вопросы
+                                и&nbsp;отправляйте свой код на&nbsp;проверку</p>
+                        </div>
+                        <div class="advantages__item item-advantages" data-aos="fade-up" data-aos-delay="500">
+                            <i class="item-advantages__icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#payment"></use>
+                                </svg>
+                            </i>
+                            <h3 class="item-advantages__title">Оплата небольшими частями</h3>
+                            <p class="item-advantages__descr">Платите только за&nbsp;тот материал, который сейчас изучаете,
+                                а&nbsp;не&nbsp;за&nbsp;весь курс сразу</p>
+                        </div>
+                        <div class="advantages__item item-advantages" data-aos="fade-up" data-aos-delay="600">
+                            <i class="item-advantages__icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#mobile-pay"></use>
+                                </svg>
+                            </i>
+                            <h3 class="item-advantages__title">Быстрый и&nbsp;легкий возврат</h3>
+                            <p class="item-advantages__descr">Если передумаете учиться &mdash;
+                                вернем деньги за&nbsp;3&nbsp;рабочих дня</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Process -->
+            <section class="process">
+                <div class="container">
+                    <h2 class="process__title title">Как происходит обучение на&nbsp;YtYt?</h2>
+                    <p class="process__descr text" data-aos="fade-up" data-aos-delay="0">Обучение должно быть комфортным. Поэтому
+                        мы&nbsp;разработали собственную
+                        платформу для обучения программированию. На&nbsp;ней вы&nbsp;можете не&nbsp;только изучать теорию,
+                        но&nbsp;и&nbsp;запускать готовые примеры и&nbsp;даже писать свой собственный код.
+                    </p>
+                    <div class="process__list">
+                        <div class="process__item item-process" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+                            <h2 class="item-process__title">Весь материал разбит на&nbsp;небольшие уроки</h2>
+                            <p class="item-process__descr text">Теория и&nbsp;практика подаются маленькими порциями. Так вам будет
+                                легче усваивать новые знания.</p>
+                        </div>
+                        <div class="process__item item-process" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                            <h2 class="item-process__title">Обучение через практику</h2>
+                            <p class="item-process__descr text">Всё, что вы&nbsp;узнали, вы&nbsp;тут&nbsp;же начинаете применять
+                                на&nbsp;практике. Вы&nbsp;сразу видите результаты своего труда.</p>
+                        </div>
+                        <div class="process__item item-process" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
+                            <h2 class="item-process__title">Нет ограничений по&nbsp;времени</h2>
+                            <p class="item-process__descr text">Можно совмещать учёбу с&nbsp;работой и&nbsp;другими делами.
+                                Не&nbsp;нужно выпрашивать академический отпуск, если пришлось сделать перерыв.</p>
+                        </div>
+                    </div>
+                    <div class="process__bottom" data-aos="zoom-in" data-aos-duration="1000">
+                        <button class="process__button button-main"><span class="button-main__text">Начать обучение</span></button>
+                        <p class="process__bottom-text">Попробуйте, первые уроки бесплатны, но&nbsp;нужно пройти тестирование</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Support -->
+            <section class="support">
+                <div class="container">
+                    <div class="support__item item-support">
+                        <div class="item-support__img" data-aos="fade-right" data-aos-delay="150" data-aos-duration="800">
+                            <img src="img/support-chat.webp" alt="People working" width="271" height="231">
+                        </div>
+                        <div class="item-support__content" data-aos="fade-left" data-aos-delay="100">
+                            <h3 class="item-support__title">Помощь и&nbsp;поддержка</h3>
+                            <p class="item-support__text text">Если в&nbsp;процессе обучения возникнут сложности, вы&nbsp;всегда
+                                сможете задать вопрос своему наставнику.</p>
+                            <p class="item-support__text text">Раз в&nbsp;несколько уроков вы&nbsp;будете получать большое
+                                задание,
+                                которое нужно будет сдавать на&nbsp;проверку код-ревьюеру. Он&nbsp;внимательно изучит ваш код,
+                                найдет ошибки и&nbsp;поможет вам стать лучше.</p>
+                        </div>
+                    </div>
+                    <div class="support__item item-support">
+                        <div class="item-support__content" data-aos="fade-right" data-aos-delay="250" data-aos-duration="800">
+                            <h3 class="item-support__title">Методика обучения
+                            </h3>
+                            <p class="item-support__text text">Весь учебный материал структурирован по&nbsp;принципу
+                                &laquo;спирального обучения&raquo;. Сначала вы&nbsp;получаете базовые знания, а&nbsp;затем
+                                на&nbsp;каждом витке спирали углубляетесь в&nbsp;изученные темы, доводя их&nbsp;понимание
+                                до&nbsp;совершенства. Такой подход упрощает обучение и&nbsp;гарантирует, что
+                                вы&nbsp;не&nbsp;пропустите ничего важного.</p>
+                        </div>
+                        <div class="item-support__img" data-aos="fade-left" data-aos-delay="200">
+                            <img src="img/support-practice.png" alt="User chatting" width="258" height="259">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Price -->
+            <section class="price">
+                <div class="container">
+                    <h2 class="price__title title">Стоимость обучения</h2>
+                    <div class="price__items">
+                        <div class="price__item" data-aos="fade-in" data-aos-delay="300">
+                            <i class="price__item-icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#blocks"></use>
+                                </svg>
+                            </i>
+                            <p class="price__item-text text">Весь курс разбит на&nbsp;несколько блоков. Оплата поэтапная
+                                вы&nbsp;платите только за&nbsp;тот блок, который сейчас проходите
+                            </p>
+                        </div>
+                        <div class="price__item" data-aos="fade-in" data-aos-delay="500">
+                            <i class="price__item-icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#payment"></use>
+                                </svg>
+                            </i>
+                            <p class="price__item-text text">Любой из&nbsp;блоков вы&nbsp;можете оплатить в&nbsp;рассрочку</p>
+                        </div>
+                        <div class="price__item" data-aos="fade-in" data-aos-delay="700">
+                            <i class="price__item-icon">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#mobile-pay"></use>
+                                </svg>
+                            </i>
+                            <p class="price__item-text text">Если передумаете учиться, то&nbsp;возврат можно оформить в&nbsp;любой
+                                момент. Возвращаем деньги за&nbsp;3&nbsp;рабочих дня</p>
+                        </div>
+                    </div>
+                    <div class="price__table price-table">
+                        <div class="price-table__inner">
+                            <div class="price-table__head">
+                                <div class="price-table__col">Блок</div>
+                                <div class="price-table__col">Стоимость (₽)</div>
+                                <div class="price-table__col">Расчетное время обучения (мес.) *</div>
+                            </div>
+                            <div class="price-table__row">
+                                <div class="price-table__col">Введение в&nbsp;программирование
+                                </div>
+                                <div class="price-table__col">Бесплатно</div>
+                                <div class="price-table__col">0.5</div>
+                            </div>
+                            <div class="price-table__row">
+                                <div class="price-table__col">Основы программирования на&nbsp;Python
+                                </div>
+                                <div class="price-table__col">9 900</div>
+                                <div class="price-table__col">1 </div>
+                            </div>
+                            <div class="price-table__row">
+                                <div class="price-table__col">Python, продвинутый уровень
+                                </div>
+                                <div class="price-table__col">14 900</div>
+                                <div class="price-table__col">2.5</div>
+                            </div>
+                            <div class="price-table__row">
+                                <div class="price-table__col">Сети + фреймворк Flask
+                                </div>
+                                <div class="price-table__col">14 900</div>
+                                <div class="price-table__col">2.5</div>
+                            </div>
+                            <div class="price-table__row">
+                                <div class="price-table__col">Базы данных
+                                </div>
+                                <div class="price-table__col">14 900</div>
+                                <div class="price-table__col">2</div>
+                            </div>
+                            <div class="price-table__row">
+                                <div class="price-table__col">Фреймворк Django
+                                </div>
+                                <div class="price-table__col">14 900</div>
+                                <div class="price-table__col">2</div>
+                            </div>
+                            <div class="price-table__row">
+                                <div class="price-table__col">Разработка «боевого» проекта
+                                </div>
+                                <div class="price-table__col">9 900</div>
+                                <div class="price-table__col">1.5</div>
+                            </div>
+                            <div class="price-table__result">
+                                <div class="price-table__col">Итого</div>
+                                <div class="price-table__col">79 400</div>
+                                <div class="price-table__col">12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price__note text">* если занятиям уделяется около 20&nbsp;часов в&nbsp;неделю</div>
+                </div>
+            </section>
+
+
+            <!-- Warning -->
+            <div class="warning">
+                <div class="container">
+                    <div class="warning__wrapper">
+                        <i class="warning__icon">
+                            <svg>
+                                <use xlink:href="icons/sprite.svg#warning"></use>
+                            </svg>
+                        </i>
+                        <p class="warning__text">Все блоки проходятся строго по&nbsp;порядку. Пропустить какой-то блок или начать
+                            обучение с&nbsp;середины нельзя, даже если вы&nbsp;считаете, что уже знаете какую-то часть материала.
+                            Только так мы&nbsp;можем гарантировать, что вы&nbsp;получите все знания, предусмотренные учебной
+                            программой.</p>
+                        <button class="warning__button button-main"><span class="button-main__text">Начать обучение</span></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__left">
+                        <div class="footer__brand">
+                            <img src="img/logo.svg" alt="logo" width="88" height="32">
+                            <span class="text">Школа программирования</span>
+                        </div>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#inst"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#youtube"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Чему вы&nbsp;научитесь</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Процесс обучения</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Стоимость</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Контакты</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a href="#" class="footer__menu-link">Регистрация</a>
+                        </li>
+                    </ul>
+                    <div class="footer__right">
+                        <div class="footer__contacts">
+                            <a href="tel:+74993489396" class="footer__tel">+7 (499) 348 93 96</a>
+                            <a href="mailto:info@ytyt.ru" class="footer__email">info@ytyt.ru</a>
+                        </div>
+                        <div class="footer__info">
+                            <div class="footer__info-row">ИП&nbsp;Иванов А.А</div>
+                            <div class="footer__info-row">ИНН 712345678910</div>
+                            <div class="footer__info-row">ОГРНИП 351245600001234</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyrigth text">&copy;&nbsp;2022 ytyt&nbsp;&mdash; Все права защищены</div>
+                    <a href="#" class="footer__policy text">Пользовательское соглашение</a>
+                    <a href="#" class="footer__policy text">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="overlay">
+        <div class="modal" id="callback">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">Оставить заявку</div>
+            <form class="modal__form" action="#">
+                <input class="modal__input" required name="name" placeholder="Ваше имя" type="text">
+                <input class="modal__input" required name="phone" placeholder="Ваш телефон" type="tel">
+                <input class="modal__input" name="email" placeholder="Ваш E-mail" type="email">
+                <label class="modal__checkbox" for="modal-checkbox">
+                    <input required class="modal__checkbox-input" type="checkbox" id="modal-checkbox">
+                    <span class="modal__checkbox-fake"></span>
+                    <span class="modal__checkbox-text">Согласие на обработку персональных данных</span>
+                </label>
+                <button class="btn btn-callback-submit">Перезвоните мне</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <svg class="modal__icon" width="24" height="24" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 5.66683C15.2179 5.66683 5.66665 15.2181 5.66665 27.0002C5.66665 38.7822 15.2179 48.3335 27 48.3335C38.7821 48.3335 48.3333 38.7822 48.3333 27.0002C48.3333 15.2181 38.7821 5.66683 27 5.66683ZM0.333313 27.0002C0.333313 12.2726 12.2724 0.333496 27 0.333496C41.7276 0.333496 53.6666 12.2726 53.6666 27.0002C53.6666 41.7278 41.7276 53.6668 27 53.6668C12.2724 53.6668 0.333313 41.7278 0.333313 27.0002ZM39.4383 18.3404C40.539 19.3189 40.6382 21.0044 39.6597 22.1051L25.4375 38.1051C24.9315 38.6744 24.2061 39.0002 23.4444 39.0002C22.6827 39.0002 21.9574 38.6744 21.4513 38.1051L14.3402 30.1051C13.3618 29.0044 13.4609 27.3189 14.5617 26.3404C15.6624 25.362 17.348 25.4611 18.3264 26.5619L23.4444 32.3196L35.6736 18.5619C36.652 17.4611 38.3375 17.362 39.4383 18.3404Z" fill="#213887" />
+            </svg>
+            <div class="modal__title">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
