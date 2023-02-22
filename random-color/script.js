@@ -60,11 +60,15 @@ function createRandomGradient3(...args) {
 }
 
 function addItem(countColors) {
-    if (!historyEl.classList.contains('hide')) {
-        btnClear.classList.add('active')
+    history.classList.contains('active')
+    btnClear.classList.add('active')
+    if (historyEl.childElementCount + 1 > 0) {
+        history.classList.add('active')
+        historyEl.classList.remove('hide')
+        historyToggle.innerText = 'Hide history'
     }
+    console.log(historyEl.childElementCount + 1)
     btnCopy.classList.add('active')
-    history.classList.add('active')
     colorIcon.classList.add('active')
     const newItem = document.createElement('button')
     newItem.classList.add('item')
@@ -139,3 +143,43 @@ btnCopy.addEventListener('click', () => {
             console.error('Error: ', err);
         });
 })
+
+
+const throttle = (func, delay = 250) => {
+    let isThrottled = false;
+    let savedArgs = null;
+    let savedThis = null;
+
+    return function wrap(...args) {
+        if (isThrottled) {
+            savedArgs = args,
+                savedThis = this;
+            return;
+        }
+
+        func.apply(this, args);
+        isThrottled = true;
+
+        setTimeout(() => {
+            isThrottled = false;
+
+            if (savedThis) {
+                wrap.apply(savedThis, savedArgs);
+                savedThis = null;
+                savedArgs = null;
+            }
+
+        }, delay);
+    }
+};
+
+const fixFullheight = () => {
+    let vh = window.innerHeight;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
+let fixHeight = throttle(fixFullheight);
+
+fixHeight();
+
+window.addEventListener('resize', fixHeight);
