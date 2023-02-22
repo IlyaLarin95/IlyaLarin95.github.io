@@ -6,6 +6,7 @@ const colorInner = document.querySelector('.color-inner')
 const colorIcon = document.querySelector('.color-icon')
 const colorName = document.querySelector('.color-name')
 const btnCopy = document.querySelector('.btn-copy')
+const btnClear = document.querySelector('.btn-clear')
 const historyToggle = document.querySelector('.history-toggle')
 const history = document.querySelector('.history')
 const historyEl = document.querySelector('.history-inner')
@@ -15,6 +16,7 @@ const symbols3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'A', 'B', 'C', 'D', 'E', 'F']
 
 historyToggle.addEventListener('click', () => {
     historyEl.classList.toggle('hide')
+    btnClear.classList.toggle('active')
     if (historyEl.classList.contains('hide')) {
         historyToggle.innerText = 'Show history'
     } else {
@@ -57,31 +59,38 @@ function createRandomGradient3(...args) {
     return `linear-gradient(#${symbols1.slice(0, 6).join('')},#${symbols2.slice(0, 6).join('')},#${symbols3.slice(0, 6).join('')})`
 }
 
-btnColor.addEventListener('click', () => {
+function addItem(countColors) {
+    if (!historyEl.classList.contains('hide')) {
+        btnClear.classList.add('active')
+    }
+    btnCopy.classList.add('active')
     history.classList.add('active')
     colorIcon.classList.add('active')
     const newItem = document.createElement('button')
     newItem.classList.add('item')
-    newItem.setAttribute('draggable', 'true')
     historyEl.append(newItem)
-    wrapper.style.background = colorIcon.style.background = colorName.innerText = newItem.style.background = createRandomColor(symbols1);
+    wrapper.style.background = colorIcon.style.background = colorName.innerText = newItem.style.background = countColors;
+}
+
+btnColor.addEventListener('click', () => {
+    addItem(createRandomColor(symbols1))
 })
 
 btnGradient.addEventListener('click', () => {
-    const newItem = document.createElement('button')
-    newItem.classList.add('item')
-    newItem.setAttribute('draggable', 'true')
-    historyEl.append(newItem)
-    wrapper.style.background = colorIcon.style.background = colorName.innerText = newItem.style.background = createRandomGradient(symbols1, symbols2);
+    addItem(createRandomGradient(symbols1, symbols2))
 
 })
 
 btnGradient3.addEventListener('click', () => {
-    const newItem = document.createElement('button')
-    newItem.classList.add('item')
-    newItem.setAttribute('draggable', 'true')
-    historyEl.append(newItem)
-    wrapper.style.background = colorIcon.style.background = colorName.innerText = newItem.style.background = createRandomGradient3(symbols1, symbols2, symbols3);
+    addItem(createRandomGradient3(symbols1, symbols2, symbols3))
+})
+
+btnClear.addEventListener('click', () => {
+    historyEl.innerHTML = '';
+    wrapper.style.background = 'rgba(100, 100, 100, 0.2)';
+    colorName.innerText = 'Here your color';
+    btnCopy.classList.remove('active');
+    colorIcon.classList.remove('active');
 })
 
 
@@ -118,6 +127,7 @@ for (const button of buttons) {
 btnCopy.addEventListener('click', () => {
     btnCopy.innerText = 'Copied!'
     colorInner.classList.add('copied')
+    window.getSelection().selectAllChildren(colorName)
     navigator.clipboard.writeText(colorName.innerText)
         .then(() => {
             setTimeout(() => {
