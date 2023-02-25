@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Labrada&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <select id="select-lang">
+            <option value="ru">ru</option>
+            <option value="eng">eng</option>
+        </select>
+        <textarea id="textarea-1"></textarea>
+        <textarea id="textarea-2"></textarea>
+        <button id="copy" class="copy">
+            <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 1024 1024">
+                <path
+                    d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z" />
+                <path
+                    d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z" />
+            </svg>
+        </button>
+        <button id="encrypt">Зашифровать</button>
+        <button id="decipher">Расшифровать</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
