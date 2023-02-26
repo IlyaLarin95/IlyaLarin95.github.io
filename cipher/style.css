@@ -79,6 +79,7 @@ textarea:not(#textarea-2):focus {
 select {
     margin: 10px 0;
     align-self: flex-end;
+    font-size: 18px;
     border-radius: var(--border-radius);
     width: 48px;
     box-shadow: var(--box-shadow);

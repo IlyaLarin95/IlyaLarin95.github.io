@@ -6,7 +6,7 @@ const btnClear = document.querySelector('#clear')
 const btnCopy = document.querySelector('#copy')
 const selectLang = document.querySelector('#select-lang')
 const html = document.querySelector('html');
-const keyValue = 1;
+const keyValue = Math.ceil((Math.sqrt(13) * 100 + Math.sqrt(26) * 14) / 13);
 
 const alphabetRu = {
     "а": 1,
@@ -112,6 +112,7 @@ const symbols = {
     "`": 137,
     "~": 138,
     "|": 139,
+    "/": 140,
 }
 
 const alphabetRuFull = Object.assign(alphabetRu, symbols)
@@ -191,10 +192,14 @@ const decipher = function (alphabet) {
     textareaResult.innerText = decipherText;
 }
 
-const changeLanguage = function () {
-    const value = selectLang.value
+const clearFields = function () {
     textareaEnter.value = ''
     textareaResult.innerText = ''
+}
+
+const changeLanguage = function () {
+    const value = selectLang.value
+    clearFields()
     if (value === "en") {
         setEnSettings()
     } if (value === "ru") {
@@ -223,7 +228,7 @@ textareaEnter.addEventListener('keydown', (e) => {
     } else return
 })
 
-
+btnClear.addEventListener('click', clearFields)
 selectLang.addEventListener('input', changeLanguage)
 btnCopy.addEventListener('click', copyText)
 
