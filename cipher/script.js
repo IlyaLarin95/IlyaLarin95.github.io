@@ -1,10 +1,14 @@
-const textarea1 = document.querySelector('#textarea-1')
-const textarea2 = document.querySelector('#textarea-2')
+const textareaEnter = document.querySelector('.textarea-enter')
+const textareaResult = document.querySelector('.textarea-result')
 const btnEncrypt = document.querySelector('#encrypt')
 const btnDecipher = document.querySelector('#decipher')
-const selectLang = document.querySelector('#select-lang')
+const btnClear = document.querySelector('#clear')
 const btnCopy = document.querySelector('#copy')
-const alphabet = {
+const selectLang = document.querySelector('#select-lang')
+const html = document.querySelector('html');
+const keyValue = 1;
+
+const alphabetRu = {
     "а": 1,
     "б": 2,
     "в": 3,
@@ -38,22 +42,89 @@ const alphabet = {
     "э": 31,
     "ю": 32,
     "я": 33,
-    '0': 34,
-    '1': 35,
-    '2': 36,
-    '3': 37,
-    '4': 38,
-    '5': 39,
-    '6': 40,
-    '7': 41,
-    '8': 42,
-    '9': 43,
-    " ": 44,
-    ",": 45,
-    ".": 46,
-    "!": 47,
-    "?": 48,
 }
+const alphabetEn = {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+    "d": 4,
+    "e": 5,
+    "f": 6,
+    "g": 7,
+    "h": 8,
+    "i": 9,
+    "j": 10,
+    "k": 11,
+    "l": 12,
+    "m": 13,
+    "n": 14,
+    "o": 15,
+    "p": 16,
+    "q": 17,
+    "r": 18,
+    "s": 19,
+    "t": 20,
+    "u": 21,
+    "v": 22,
+    "w": 23,
+    "x": 24,
+    "y": 25,
+    "z": 26,
+}
+
+const symbols = {
+    '0': 101,
+    '1': 102,
+    '2': 103,
+    '3': 104,
+    '4': 105,
+    '5': 106,
+    '6': 107,
+    '7': 108,
+    '8': 109,
+    '9': 110,
+    " ": 111,
+    ",": 112,
+    ".": 113,
+    "!": 114,
+    "?": 115,
+    "@": 116,
+    "'": 117,
+    "\"": 118,
+    "$": 119,
+    ":": 120,
+    ";": 121,
+    "%": 122,
+    "&": 123,
+    "*": 124,
+    "(": 125,
+    ")": 126,
+    "-": 127,
+    "=": 128,
+    "+": 129,
+    "\\": 130,
+    "{": 131,
+    "}": 132,
+    "[": 133,
+    "]": 134,
+    "<": 135,
+    ">": 136,
+    "`": 137,
+    "~": 138,
+    "|": 139,
+}
+
+const alphabetRuFull = Object.assign(alphabetRu, symbols)
+const alphabetEnFull = Object.assign(alphabetEn, symbols)
+
+function addKey(obj) {
+    for (let key in obj) {
+        obj[key] *= keyValue;
+    }
+}
+
+addKey(alphabetRuFull)
+addKey(alphabetEnFull)
 
 Object.prototype.getKeyByValue = function (value) {
     for (var prop in this) {
@@ -63,33 +134,114 @@ Object.prototype.getKeyByValue = function (value) {
         }
     }
 }
+const languageText = {
+    en: {
+        encrypt: 'Encrypt',
+        decipher: 'Decipher',
+        textareaEnter: 'Enter message here',
+        textareaResult: 'There will be a encrypted message here',
+        clear: 'Clear',
+        copyResult: 'Copy result',
+    },
+    ru: {
+        encrypt: 'Зашифровать',
+        decipher: 'Расшифровать',
+        textareaEnter: 'Введите послание сюда',
+        textareaResult: 'Здесь будет зашифрованное послание',
+        clear: 'Очистить',
+        copyResult: 'Скопировать результат',
+    }
+}
 
+const langStatusEn = function () {
+    return html.getAttribute('lang') === 'en'
+}
+const langStatusRu = function () {
+    return html.getAttribute('lang') === 'ru'
+}
 
-selectLang.addEventListener('input', () => {
+const setEnSettings = function () {
+    html.setAttribute('lang', 'en')
+    btnEncrypt.innerText = languageText.en.encrypt
+    btnDecipher.innerText = languageText.en.decipher
+    btnClear.innerText = languageText.en.clear
+    btnCopy.innerText = languageText.en.copyResult
+    textareaEnter.setAttribute('placeholder', languageText.en.textareaEnter)
+    textareaResult.setAttribute('placeholder', languageText.en.textareaResult)
+}
+const setRuSettings = function () {
+    html.setAttribute('lang', 'ru')
+    btnEncrypt.innerText = languageText.ru.encrypt
+    btnDecipher.innerText = languageText.ru.decipher
+    btnClear.innerText = languageText.ru.clear
+    btnCopy.innerText = languageText.ru.copyResult
+    textareaEnter.setAttribute('placeholder', languageText.ru.textareaEnter)
+    textareaResult.setAttribute('placeholder', languageText.ru.textareaResult)
+}
+
+const encrypt = function (alphabet) {
+    let text1 = textareaEnter.value
+    let encryptText = text1.toLowerCase().split('').map(l => l = alphabet[l])
+    textareaResult.innerText = encryptText
+}
+
+const decipher = function (alphabet) {
+    let text1 = textareaEnter.value;
+    decipherText = text1.split(',').map(l => l = alphabet.getKeyByValue(Number(l))).join('')
+    textareaResult.innerText = decipherText;
+}
+
+const changeLanguage = function () {
     const value = selectLang.value
-    if (value === "eng") {
-        btnEncrypt.innerText = 'Encrypt'
-        btnDecipher.innerText = 'Decipher'
+    textareaEnter.value = ''
+    textareaResult.innerText = ''
+    if (value === "en") {
+        setEnSettings()
     } if (value === "ru") {
-        btnEncrypt.innerText = 'Зашифровать'
-        btnDecipher.innerText = 'Расшифровать'
+        setRuSettings()
+    }
+}
+
+const copyText = function () {
+    window.getSelection().selectAllChildren(textareaResult)
+    navigator.clipboard.writeText(textareaResult.value)
+}
+
+const setResultToTextarea = function (alphabet) {
+    textareaEnter.value[0] == Number(textareaEnter.value[0]) && textareaEnter.value.includes(',') ? decipher(alphabet) : encrypt(alphabet)
+}
+
+textareaEnter.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault()
+        if (langStatusEn()) {
+            setResultToTextarea(alphabetEnFull)
+        }
+        if (langStatusRu()) {
+            setResultToTextarea(alphabetRuFull)
+        }
+    } else return
+})
+
+
+selectLang.addEventListener('input', changeLanguage)
+btnCopy.addEventListener('click', copyText)
+
+btnEncrypt.addEventListener('click', () => {
+    if (langStatusEn()) {
+        encrypt(alphabetEnFull)
+    }
+    if (langStatusRu()) {
+        encrypt(alphabetRuFull)
     }
 })
 
-btnEncrypt.addEventListener('click', () => {
-    let text1 = textarea1.value
-    let encryptText = text1.toLowerCase().split('').map(l => l = l = alphabet[l])
-    textarea2.innerText = encryptText
-})
-
 btnDecipher.addEventListener('click', () => {
-    let text1 = textarea1.value;
-    decipherText = text1.split(',').map(l => l = alphabet.getKeyByValue(Number(l))).join('')
-    textarea2.innerText = decipherText;
+    if (langStatusEn()) {
+        decipher(alphabetEnFull)
+    }
+    if (langStatusRu()) {
+        decipher(alphabetRuFull)
+    }
 })
 
-
-btnCopy.addEventListener('click', () => {
-    window.getSelection().selectAllChildren(textarea2)
-    navigator.clipboard.writeText(textarea2.value)
-})
