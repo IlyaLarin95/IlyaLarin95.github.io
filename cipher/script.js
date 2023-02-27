@@ -6,7 +6,7 @@ const btnClear = document.querySelector('#clear')
 const btnCopy = document.querySelector('#copy')
 const selectLang = document.querySelector('#select-lang')
 const html = document.querySelector('html');
-const keyValue = Math.ceil((Math.sqrt(13) * 100 + Math.sqrt(26) * 14) / 13);
+const keyValue = 91;
 
 const alphabetRu = {
     "а": 1,
@@ -113,19 +113,20 @@ const symbols = {
     "~": 138,
     "|": 139,
     "/": 140,
+    NaN: 141,
 }
 
 const alphabetRuFull = Object.assign(alphabetRu, symbols)
 const alphabetEnFull = Object.assign(alphabetEn, symbols)
 
-function addKey(obj) {
-    for (let key in obj) {
-        obj[key] *= keyValue;
-    }
-}
+// function addKey(obj) {
+//     for (let key in obj) {
+//         obj[key] *= keyValue;
+//     }
+// }
 
-addKey(alphabetRuFull)
-addKey(alphabetEnFull)
+// addKey(alphabetRuFull)
+// addKey(alphabetEnFull)
 
 Object.prototype.getKeyByValue = function (value) {
     for (var prop in this) {
@@ -135,6 +136,7 @@ Object.prototype.getKeyByValue = function (value) {
         }
     }
 }
+
 const languageText = {
     en: {
         encrypt: 'Encrypt',
@@ -170,6 +172,7 @@ const setEnSettings = function () {
     textareaEnter.setAttribute('placeholder', languageText.en.textareaEnter)
     textareaResult.setAttribute('placeholder', languageText.en.textareaResult)
 }
+
 const setRuSettings = function () {
     html.setAttribute('lang', 'ru')
     btnEncrypt.innerText = languageText.ru.encrypt
@@ -181,14 +184,14 @@ const setRuSettings = function () {
 }
 
 const encrypt = function (alphabet) {
-    let text1 = textareaEnter.value
-    let encryptText = text1.toLowerCase().split('').map(l => l = alphabet[l])
+    let text = textareaEnter.value
+    let encryptText = text.toLowerCase().split('').map(l => l = alphabet[l]).join(keyValue)
     textareaResult.innerText = encryptText
 }
 
 const decipher = function (alphabet) {
-    let text1 = textareaEnter.value;
-    decipherText = text1.split(',').map(l => l = alphabet.getKeyByValue(Number(l))).join('')
+    let text = textareaEnter.value;
+    decipherText = text.split(keyValue).map(l => l = alphabet.getKeyByValue(Number(l))).join('')
     textareaResult.innerText = decipherText;
 }
 
@@ -213,8 +216,10 @@ const copyText = function () {
 }
 
 const setResultToTextarea = function (alphabet) {
-    textareaEnter.value[0] == Number(textareaEnter.value[0]) && textareaEnter.value.includes(',') ? decipher(alphabet) : encrypt(alphabet)
+    textareaEnter.value[0] == Number(textareaEnter.value[0]) ? decipher(alphabet) : encrypt(alphabet)
 }
+
+
 
 textareaEnter.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -225,12 +230,13 @@ textareaEnter.addEventListener('keydown', (e) => {
         if (langStatusRu()) {
             setResultToTextarea(alphabetRuFull)
         }
-    } else return
+    }
 })
 
 btnClear.addEventListener('click', clearFields)
 selectLang.addEventListener('input', changeLanguage)
 btnCopy.addEventListener('click', copyText)
+textareaResult.addEventListener('click', copyText)
 
 btnEncrypt.addEventListener('click', () => {
     if (langStatusEn()) {
@@ -249,4 +255,3 @@ btnDecipher.addEventListener('click', () => {
         decipher(alphabetRuFull)
     }
 })
-

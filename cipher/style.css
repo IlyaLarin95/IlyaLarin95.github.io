@@ -74,6 +74,7 @@ textarea:not(#textarea-2):focus {
 .textarea-result {
     font-size: 16px;
     background-color: var(--bg-color);
+    cursor: copy;
 }
 
 select {
@@ -128,4 +129,9 @@ button:active {
     padding-left: 5px;
     width: 100%;
     max-height: 100%;
+}
+
+.btn-clear {
+    margin-right: 0;
+    margin-left: 0;
 }
