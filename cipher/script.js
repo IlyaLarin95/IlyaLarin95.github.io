@@ -156,31 +156,21 @@ const languageText = {
     }
 }
 
-const langStatusEn = function () {
+const currentLangEn = function () {
     return html.getAttribute('lang') === 'en'
 }
-const langStatusRu = function () {
+const currentLangRu = function () {
     return html.getAttribute('lang') === 'ru'
 }
 
-const setEnSettings = function () {
-    html.setAttribute('lang', 'en')
-    btnEncrypt.innerText = languageText.en.encrypt
-    btnDecipher.innerText = languageText.en.decipher
-    btnClear.innerText = languageText.en.clear
-    btnCopy.innerText = languageText.en.copyResult
-    textareaEnter.setAttribute('placeholder', languageText.en.textareaEnter)
-    textareaResult.setAttribute('placeholder', languageText.en.textareaResult)
-}
-
-const setRuSettings = function () {
-    html.setAttribute('lang', 'ru')
-    btnEncrypt.innerText = languageText.ru.encrypt
-    btnDecipher.innerText = languageText.ru.decipher
-    btnClear.innerText = languageText.ru.clear
-    btnCopy.innerText = languageText.ru.copyResult
-    textareaEnter.setAttribute('placeholder', languageText.ru.textareaEnter)
-    textareaResult.setAttribute('placeholder', languageText.ru.textareaResult)
+const setSettinsByLang = function (lang) {
+    html.setAttribute('lang', `${lang}`)
+    btnEncrypt.innerText = languageText[`${lang}`]['encrypt']
+    btnDecipher.innerText = languageText[`${lang}`]['decipher']
+    btnClear.innerText = languageText[`${lang}`]['clear']
+    btnCopy.innerText = languageText[`${lang}`]['copyResult']
+    textareaEnter.setAttribute('placeholder', languageText[`${lang}`]['textareaEnter'])
+    textareaResult.setAttribute('placeholder', languageText[`${lang}`]['textareaResult'])
 }
 
 const encrypt = function (alphabet) {
@@ -201,12 +191,14 @@ const clearFields = function () {
 }
 
 const changeLanguage = function () {
-    const value = selectLang.value
     clearFields()
-    if (value === "en") {
-        setEnSettings()
-    } if (value === "ru") {
-        setRuSettings()
+    const value = selectLang.value
+    const en = 'en'
+    const ru = 'ru'
+    if (value === en) {
+        setSettinsByLang(en)
+    } if (value === ru) {
+        setSettinsByLang(ru)
     }
 }
 
@@ -224,10 +216,10 @@ const setResultToTextarea = function (alphabet) {
 textareaEnter.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         e.preventDefault()
-        if (langStatusEn()) {
+        if (currentLangEn()) {
             setResultToTextarea(alphabetEnFull)
         }
-        if (langStatusRu()) {
+        if (currentLangRu()) {
             setResultToTextarea(alphabetRuFull)
         }
     }
@@ -239,19 +231,19 @@ btnCopy.addEventListener('click', copyText)
 textareaResult.addEventListener('click', copyText)
 
 btnEncrypt.addEventListener('click', () => {
-    if (langStatusEn()) {
+    if (currentLangEn()) {
         encrypt(alphabetEnFull)
     }
-    if (langStatusRu()) {
+    if (currentLangRu()) {
         encrypt(alphabetRuFull)
     }
 })
 
 btnDecipher.addEventListener('click', () => {
-    if (langStatusEn()) {
+    if (currentLangEn()) {
         decipher(alphabetEnFull)
     }
-    if (langStatusRu()) {
+    if (currentLangRu()) {
         decipher(alphabetRuFull)
     }
 })

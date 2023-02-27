@@ -66,7 +66,8 @@ textarea::placeholder {
     font-size: 16px;
 }
 
-textarea:not(#textarea-2):focus {
+textarea:focus,
+.textarea-result:active {
     box-shadow: 0px 0px 10px var(--main-color);
     transition: var(--transition);
 }
@@ -75,6 +76,11 @@ textarea:not(#textarea-2):focus {
     font-size: 16px;
     background-color: var(--bg-color);
     cursor: copy;
+}
+
+.textarea-result:hover {
+    box-shadow: 0px 0px 10px var(--main-color);
+    transition: var(--transition);
 }
 
 select {
