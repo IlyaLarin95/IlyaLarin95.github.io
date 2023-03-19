@@ -191,15 +191,9 @@ const clearFields = function () {
 }
 
 const changeLanguage = function () {
+    const lang = selectLang.value
+    setSettinsByLang(lang)
     clearFields()
-    const value = selectLang.value
-    const en = 'en'
-    const ru = 'ru'
-    if (value === en) {
-        setSettinsByLang(en)
-    } if (value === ru) {
-        setSettinsByLang(ru)
-    }
 }
 
 const copyText = function () {
